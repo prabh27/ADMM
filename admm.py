@@ -113,3 +113,6 @@ class ADMM:
 
     def LassoObjective(self):
         return 0.5 * norm(self.A.dot(self.X) - self.b)**2 + self.alpha *  norm(self.X, 1)
+    
+    def getWeights(self):
+        return self.X
